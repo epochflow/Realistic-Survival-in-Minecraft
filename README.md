@@ -1,18 +1,3 @@
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![MIT License][license-shield]][license-url]
-[![Release][release-shield]][release-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -34,20 +19,14 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
-## 목차
 
-* [소개](#소개)
-* [설정](#설정)
-* [사용법](#사용법)
-* [로드맵](#로드맵)
-* [문의](#문의)
+<!-- ABOUT THE PROJECT --><!-- PROJECT SHIELDS -->
+##
 
-
-
-<!-- ABOUT THE PROJECT -->
-## 소개
-
+[![Contributors][contributors-shield]][contributors-url]
+[![Stargazers][stars-shield]][stars-url]
+[![MIT License][license-shield]][license-url]
+[![Release][release-shield]][release-url]
 
 
 
