@@ -1,0 +1,19 @@
+level:
+   get_exp: §f@0 경험치를 획득했습니다!
+   up_title: §b@0 레벨이 되었습니다!
+   up_subtitle: §b@0 포인트를 획득했습니다!
+
+gui:
+   main:
+      title: §rRSiM - 메인
+      skill: §f특화 기술
+      enviroment: §f환경
+   skill:
+      title: §rRSiM - 특화
+      weapon: §f전투
+      armor: §f방어
+      magic: §f마법
+      trait: §f특성
+      farm: §f농사
+      craft: §f제작
+      resource: §f자원

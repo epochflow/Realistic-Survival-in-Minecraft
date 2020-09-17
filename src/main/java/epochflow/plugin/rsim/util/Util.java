@@ -2,6 +2,8 @@ package epochflow.plugin.rsim.util;
 
 import java.util.Random;
 
+import epochflow.plugin.rsim.Configs;
+
 public class Util {
 	
 	public static float Random(float min, float max)
@@ -28,5 +30,13 @@ public class Util {
 		for	(int i = count; i < 10; i++)
 			buffer.append(empty);
 		return buffer.toString();
+	}
+	
+	public static String getLangString(String path, String... value)
+	{
+		String result = Configs.getInstance().getLangConfig().getString(path);
+		for(int i = 0; i < value.length; i++)
+			result = result.replace("@" + i, value[0]);
+		return result;
 	}
 }

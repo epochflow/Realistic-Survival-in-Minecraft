@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.meta.FireworkMeta;
 
 import epochflow.plugin.rsim.Configs;
+import epochflow.plugin.rsim.key.LangKey;
 import epochflow.plugin.rsim.key.PluginOptionType;
 import epochflow.plugin.rsim.key.StatusType;
 import epochflow.plugin.rsim.util.AutoYaml;
@@ -39,7 +40,7 @@ public class LevelManager {
 		int point = 0;
 		
 		// TODO 언어 분리
-		player.sendMessage("§f" + exp + " 경험치를 획득했습니다!");
+		player.sendMessage(Util.getLangString(LangKey.LEVEL_GET_EXP.getKey(), String.valueOf(exp)));
 		while(true)
 		{
 			int requireExp = getLevelRequireExp(currentLevel + 1);
@@ -48,7 +49,8 @@ public class LevelManager {
 				currentLevel++;
 				point++;
 				currentExp -= requireExp;
-				player.sendTitle("§b" + currentLevel + "레벨이 되었습니다!", "§b1 포인트를 획득했습니다!", 10, 70, 20);
+				player.sendTitle(Util.getLangString(LangKey.LEVEL_UP_TITLE.getKey(), String.valueOf(currentLevel)), 
+						Util.getLangString(LangKey.LEVEL_UP_SUBTITLE.getKey(), String.valueOf(1)), 10, 70, 20);
 			}
 			else
 			{

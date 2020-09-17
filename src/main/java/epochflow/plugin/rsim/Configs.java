@@ -3,8 +3,11 @@ package epochflow.plugin.rsim;
 import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+
 import org.bukkit.entity.Player;
 
+import epochflow.plugin.rsim.key.PluginOptionType;
 import epochflow.plugin.rsim.util.AutoYaml;
 
 public class Configs {
@@ -22,6 +25,7 @@ public class Configs {
 	
 	private AutoYaml pluginConfig = null;
 	private AutoYaml skillConfig = null;
+	private AutoYaml langConfig = null;
 	
 	public AutoYaml getPluginConfig()
 	{
@@ -55,6 +59,31 @@ public class Configs {
 		return skillConfig;
 	}
 	
+	public AutoYaml getLangConfig()
+	{
+		String lang = getPluginConfig().getString(PluginOptionType.LANGUAGE.getKey());
+		if (langConfig == null)
+		{
+			File file = new File(Main.getInstance().getDataFolder() + "/Languages", lang + ".yml");
+			if (!file.exists())
+			{
+				InputStream defaultConfig = Main.getInstance().getResource("Languages/" + lang + ".yml");
+				if (defaultConfig != null)
+				{
+					AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig), file);
+					config.save();
+				}
+				else
+				{
+					Main.getInstance().getLogger().warning(lang + " is a language that does not exist.");
+					return null;
+				}
+			}
+			langConfig = AutoYaml.loadConfiguration(file);
+		}
+		return langConfig;
+	}
+	
 	public static AutoYaml getUserConfig(Player player)
 	{
 		String path = String.format("UserData/%s.yml", player.getUniqueId().toString());
@@ -64,7 +93,7 @@ public class Configs {
 			InputStream defaultConfig = Main.getInstance().getResource("userdata.yml");
 			AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig),file);
 			config.save();
-			return config;			
+			return config;
 		}
 		return AutoYaml.loadConfiguration(file);
 	}

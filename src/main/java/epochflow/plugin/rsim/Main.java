@@ -6,6 +6,7 @@ import epochflow.plugin.rsim.gui.GUIManager;
 import epochflow.plugin.rsim.listener.LevelListener;
 import epochflow.plugin.rsim.listener.PlayerListener;
 import epochflow.plugin.rsim.listener.SkillListener;
+import sun.security.krb5.Config;
 
 import org.bukkit.plugin.PluginManager;
 
@@ -22,17 +23,18 @@ public class Main extends JavaPlugin {
 	}
 	
 	@Override
-	public void onLoad() {
-		// GUI 초기화
-		new GUIManager();
-		GUIDesign.InitGUI();
-		
+	public void onLoad() {		
 		// 기본 파일 생성
 		if (!getDataFolder().exists())
 			getDataFolder().mkdir();		
 		new Configs();
 		Configs.getInstance().getPluginConfig();
 		Configs.getInstance().getSkillConfig();
+		Configs.getInstance().getLangConfig();
+		
+		// GUI 초기화
+		new GUIManager();
+		GUIDesign.InitGUI();
 	}
 	
 	@Override
