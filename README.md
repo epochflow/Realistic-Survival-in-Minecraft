@@ -76,7 +76,7 @@ EpochFlow 팀 - epochflow@gmail.com
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/epochflow/Realistic-Survival-in-Minecraft?color=Green&style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/epochflow/Realistic-Survival-in-Minecraft/graphs/contributors
 [stars-shield]: https://img.shields.io/github/stars/epochflow/Realistic-Survival-in-Minecraft?style=flat-square
 [stars-url]: https://github.com/epochflow/Realistic-Survival-in-Minecraft/stargazers
 [license-shield]: https://img.shields.io/github/license/epochflow/Realistic-Survival-in-Minecraft?style=flat-square
