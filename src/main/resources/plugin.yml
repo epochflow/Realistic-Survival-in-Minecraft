@@ -1,0 +1,19 @@
+name: RSiM
+
+main: epochflow.plugin.rsim.Main
+
+version: 0.0.1-SNAPSHOT
+
+api-version: 1.16
+
+commands:
+   rsim:
+      description: Main command
+   tj:
+      description: admin change gamemode command
+   zm:
+      description: admin change gamemode command
+   tm:
+      description: admin change gamemode command
+   vl:
+      description: admin healing command

@@ -1,0 +1,6 @@
+option:
+   level:
+      const: 1000
+      division: 50
+      increase: 10
+      balance: 10
