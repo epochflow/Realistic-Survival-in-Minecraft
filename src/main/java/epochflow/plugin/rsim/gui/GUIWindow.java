@@ -14,6 +14,9 @@ public class GUIWindow {
 	private int size;
 	private HashMap<Integer, GUIItem> items = new HashMap<>();
 	
+	/**
+	 * @param line 1 ~ 6 มู
+	 */
 	public GUIWindow(String idName, String displayName, int line)
 	{
 		this.idName = idName;
@@ -23,7 +26,7 @@ public class GUIWindow {
 	
 	public void setItem(int slot, GUIItem item)
 	{
-		items.put(new Integer(slot), item);
+		items.put(Integer.valueOf(slot), item);
 	}
 	
 	public String getIdName()
@@ -43,7 +46,7 @@ public class GUIWindow {
 	
 	public void executeEvent(Player player, int slot)
 	{
-		GUIItem item = items.get(new Integer(slot));
+		GUIItem item = items.get(Integer.valueOf(slot));
 		if (item != null)
 			item.executeAction(player);
 	}

@@ -6,3 +6,5 @@ option:
       balance: 10
       
 lang: ko-KR
+
+version: 0.0.1-SNAPSHOT

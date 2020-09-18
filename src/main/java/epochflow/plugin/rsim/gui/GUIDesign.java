@@ -16,7 +16,7 @@ public class GUIDesign {
 		EnvGUI();
 		
 		SkillGUI();
-		WeaponGUI();
+		SkillWeaponGUI();
 	}
 	
 	private static void MainGUI()
@@ -51,7 +51,7 @@ public class GUIDesign {
 		GUIManager.getInstance().registerWindow(window);
 	}
 	
-	private static void WeaponGUI()
+	private static void SkillWeaponGUI()
 	{
 		GUIWindow window = new GUIWindow("RSIM_SKILL_WEAPON", "RSiM - 전투 특화", 5);
 		

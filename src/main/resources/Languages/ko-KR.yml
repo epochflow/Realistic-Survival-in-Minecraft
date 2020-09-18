@@ -17,3 +17,5 @@ gui:
       farm: §f농사
       craft: §f제작
       resource: §f자원
+      
+version: 0.0.1-SNAPSHOT

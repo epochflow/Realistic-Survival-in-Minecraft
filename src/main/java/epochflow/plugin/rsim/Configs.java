@@ -3,7 +3,6 @@ package epochflow.plugin.rsim;
 import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.charset.Charset;
 
 import org.bukkit.entity.Player;
 
@@ -39,6 +38,7 @@ public class Configs {
 				config.save();
 			}
 			pluginConfig = AutoYaml.loadConfiguration(file);
+			pluginConfig.updateVersion("config.yml");
 		}
 		return pluginConfig;
 	}
@@ -55,6 +55,7 @@ public class Configs {
 				config.save();
 			}			
 			skillConfig = AutoYaml.loadConfiguration(file);
+			skillConfig.updateVersion("skills.yml");
 		}
 		return skillConfig;
 	}
@@ -80,6 +81,7 @@ public class Configs {
 				}
 			}
 			langConfig = AutoYaml.loadConfiguration(file);
+			langConfig.updateVersion("Languages/ko-KR.yml");
 		}
 		return langConfig;
 	}

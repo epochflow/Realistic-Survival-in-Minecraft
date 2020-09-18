@@ -6,7 +6,6 @@ import epochflow.plugin.rsim.gui.GUIManager;
 import epochflow.plugin.rsim.listener.LevelListener;
 import epochflow.plugin.rsim.listener.PlayerListener;
 import epochflow.plugin.rsim.listener.SkillListener;
-import sun.security.krb5.Config;
 
 import org.bukkit.plugin.PluginManager;
 
