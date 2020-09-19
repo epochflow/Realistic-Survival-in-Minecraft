@@ -1,0 +1,21 @@
+level:
+   get_exp: 」fGain @0 XP!
+   up_title: 」bReach @0 level!
+   up_subtitle: 」bGain @0 points!
+
+gui:
+   main:
+      title: 」rRSiM - Main
+      skill: 」fSpecialized Skill
+      enviroment: 」fEnviroment
+   skill:
+      title: 」rRSiM - Specialized
+      weapon: 」fCombat
+      armor: 」fTank
+      magic: 」fMagic
+      trait: 」fTraits
+      farm: 」fFarming
+      craft: 」fCrafting
+      resource: 」fResource
+      
+version: 0.0.1-SNAPSHOT
