@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/epochflow/Realistic-Survival-in-Minecraft">
-    <img src="images/rsim_logo_v2.png" alt="Logo" width="800" height="300">
+    <img src="images/rsim_logo_v2.png" alt="Logo" width="100%" height="100%">
   </a>
 
   <h3 align="center">Realistic Survival in Minecraft</h3>
