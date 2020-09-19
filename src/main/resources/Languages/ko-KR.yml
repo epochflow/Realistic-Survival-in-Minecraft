@@ -1,21 +1,21 @@
 level:
-   get_exp: ¡×f@0 °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù!
-   up_title: ¡×b@0 ·¹º§ÀÌ µÇ¾ú½À´Ï´Ù!
-   up_subtitle: ¡×b@0 Æ÷ÀÎÆ®¸¦ È¹µæÇß½À´Ï´Ù!
+   get_exp: Â§f@0 ê²½í—˜ì¹˜ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤!
+   up_title: Â§b@0 ë ˆë²¨ì´ ë˜ì—ˆìŠµë‹ˆë‹¤!
+   up_subtitle: Â§b@0 í¬ì¸íŠ¸ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤!
 
 gui:
    main:
-      title: ¡×rRSiM - ¸ŞÀÎ
-      skill: ¡×fÆ¯È­ ±â¼ú
-      enviroment: ¡×fÈ¯°æ
+      title: Â§rRSiM - ë©”ì¸
+      skill: Â§fíŠ¹í™” ê¸°ìˆ 
+      enviroment: Â§fí™˜ê²½
    skill:
-      title: ¡×rRSiM - Æ¯È­
-      weapon: ¡×fÀüÅõ
-      armor: ¡×f¹æ¾î
-      magic: ¡×f¸¶¹ı
-      trait: ¡×fÆ¯¼º
-      farm: ¡×f³ó»ç
-      craft: ¡×fÁ¦ÀÛ
-      resource: ¡×fÀÚ¿ø
+      title: Â§rRSiM - íŠ¹í™”
+      weapon: Â§fì „íˆ¬
+      armor: Â§fë°©ì–´
+      magic: Â§fë§ˆë²•
+      trait: Â§fíŠ¹ì„±
+      farm: Â§fë†ì‚¬
+      craft: Â§fì œì‘
+      resource: Â§fìì›
       
 version: 0.0.1-SNAPSHOT

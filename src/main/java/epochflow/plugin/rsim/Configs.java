@@ -7,6 +7,8 @@ import java.util.HashMap;
 
 import org.bukkit.entity.Player;
 
+import com.google.common.base.Charsets;
+
 import epochflow.plugin.rsim.key.PluginOptionType;
 import epochflow.plugin.rsim.util.AutoYaml;
 
@@ -36,7 +38,7 @@ public class Configs {
 			if (!file.exists())
 			{
 				InputStream defaultConfig = Main.getInstance().getResource("config.yml");
-				AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig), file);
+				AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig, Charsets.UTF_8), file);
 				config.save();
 			}
 			pluginConfig = AutoYaml.loadConfiguration(file);
@@ -53,7 +55,7 @@ public class Configs {
 			if (!file.exists())
 			{
 				InputStream defaultConfig = Main.getInstance().getResource("skills.yml");
-				AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig), file);
+				AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig, Charsets.UTF_8), file);
 				config.save();
 			}			
 			skillConfig = AutoYaml.loadConfiguration(file);
@@ -73,7 +75,7 @@ public class Configs {
 				InputStream defaultConfig = Main.getInstance().getResource("Languages/" + lang + ".yml");
 				if (defaultConfig != null)
 				{
-					AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig), file);
+					AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig, Charsets.UTF_8), file);
 					config.save();
 				}
 				else
@@ -97,7 +99,7 @@ public class Configs {
 			if (!file.exists())
 			{
 				InputStream defaultConfig = Main.getInstance().getResource("userdata.yml");
-				AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig),file);
+				AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig, Charsets.UTF_8),file);
 				config.save();
 			}
 			userConfig.put(player, AutoYaml.loadConfiguration(file));
