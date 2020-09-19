@@ -1,21 +1,21 @@
 level:
-   get_exp: ¡×fGain @0 XP!
-   up_title: ¡×bReach @0 level!
-   up_subtitle: ¡×bGain @0 points!
+   get_exp: Â§fGain @0 XP!
+   up_title: Â§bReach @0 level!
+   up_subtitle: Â§bGain @0 points!
 
 gui:
    main:
-      title: ¡×rRSiM - Main
-      skill: ¡×fSpecialized Skill
-      enviroment: ¡×fEnviroment
+      title: Â§rRSiM - Main
+      skill: Â§fSpecialized Skill
+      enviroment: Â§fEnviroment
    skill:
-      title: ¡×rRSiM - Specialized
-      weapon: ¡×fCombat
-      armor: ¡×fTank
-      magic: ¡×fMagic
-      trait: ¡×fTraits
-      farm: ¡×fFarming
-      craft: ¡×fCrafting
-      resource: ¡×fResource
+      title: Â§rRSiM - Specialized
+      weapon: Â§fCombat
+      armor: Â§fTank
+      magic: Â§fMagic
+      trait: Â§fTraits
+      farm: Â§fFarming
+      craft: Â§fCrafting
+      resource: Â§fResource
       
 version: 0.0.1-SNAPSHOT
