@@ -21,6 +21,7 @@ public class LevelManager {
 	{
 		// 계산 상수
 		int levelBalance = Configs.getInstance().getPluginConfig().getInt(PluginOptionType.OPTION_LEVEL_BALANCE.getKey());
+		int levelPoint = Configs.getInstance().getPluginConfig().getInt(PluginOptionType.OPTION_LEVEL_POINT.getKey());
 		
 		// TODO 유저 특화로 변경
 		float userRange = 0.2f;
@@ -47,10 +48,10 @@ public class LevelManager {
 			if (currentExp >= requireExp)
 			{
 				currentLevel++;
-				point++;
+				point += levelPoint;
 				currentExp -= requireExp;
 				player.sendTitle(Util.getLangString(LangKey.LEVEL_UP_TITLE.getKey(), String.valueOf(currentLevel)), 
-						Util.getLangString(LangKey.LEVEL_UP_SUBTITLE.getKey(), String.valueOf(1)), 10, 70, 20);
+						Util.getLangString(LangKey.LEVEL_UP_SUBTITLE.getKey(), String.valueOf(levelPoint)), 10, 70, 20);
 			}
 			else
 			{

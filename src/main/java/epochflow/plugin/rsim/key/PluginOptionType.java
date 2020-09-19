@@ -6,6 +6,7 @@ public enum PluginOptionType implements EnumKey {
 	OPTION_LEVEL_DIVISION("option.level.division"),
 	OPTION_LEVEL_INCREASE("option.level.increase"),
 	OPTION_LEVEL_BALANCE("option.level.balance"),
+	OPTION_LEVEL_POINT("option.level.point"),
 	
 	LANGUAGE("lang");
 

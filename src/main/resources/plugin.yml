@@ -2,7 +2,7 @@ name: RSiM
 
 main: epochflow.plugin.rsim.Main
 
-version: 0.0.1-SNAPSHOT
+version: 0.0.2-SNAPSHOT
 
 api-version: 1.16
 

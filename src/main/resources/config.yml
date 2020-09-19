@@ -4,7 +4,6 @@ option:
       division: 50
       increase: 10
       balance: 10
+      point: 100
       
 lang: ko-KR
-
-version: 0.0.1-SNAPSHOT

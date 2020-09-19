@@ -1,7 +1,7 @@
 weapon:
    increase_damage:
-      max: 10
+      max: 1000
       value: 1
       point: 1
 
-version: 0.0.1-SNAPSHOT
+version: 0.0.2-SNAPSHOT

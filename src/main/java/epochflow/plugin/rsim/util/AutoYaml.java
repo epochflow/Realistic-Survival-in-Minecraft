@@ -44,7 +44,7 @@ public class AutoYaml extends YamlConfiguration
 		{
 			InputStream latestRes = Main.getInstance().getResource(resPath);
 			YamlConfiguration latestConfig = YamlConfiguration.loadConfiguration(new InputStreamReader(latestRes));
-			Map<String, Object> values = latestConfig.getValues(false);
+			Map<String, Object> values = latestConfig.getValues(true);
 			values.forEach((key, value) ->
 			{
 				if (!this.contains(key))
