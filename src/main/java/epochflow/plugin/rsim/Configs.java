@@ -3,6 +3,7 @@ package epochflow.plugin.rsim;
 import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 
 import org.bukkit.entity.Player;
 
@@ -25,6 +26,7 @@ public class Configs {
 	private AutoYaml pluginConfig = null;
 	private AutoYaml skillConfig = null;
 	private AutoYaml langConfig = null;
+	private HashMap<Player, AutoYaml> userConfig = new HashMap<>();
 	
 	public AutoYaml getPluginConfig()
 	{
@@ -86,17 +88,20 @@ public class Configs {
 		return langConfig;
 	}
 	
-	public static AutoYaml getUserConfig(Player player)
+	public AutoYaml getUserConfig(Player player)
 	{
-		String path = String.format("UserData/%s.yml", player.getUniqueId().toString());
-		File file = new File(Main.getInstance().getDataFolder(), path);
-		if (!file.exists())
+		if (!userConfig.containsKey(player))
 		{
-			InputStream defaultConfig = Main.getInstance().getResource("userdata.yml");
-			AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig),file);
-			config.save();
-			return config;
+			String path = String.format("UserData/%s.yml", player.getUniqueId().toString());
+			File file = new File(Main.getInstance().getDataFolder(), path);
+			if (!file.exists())
+			{
+				InputStream defaultConfig = Main.getInstance().getResource("userdata.yml");
+				AutoYaml config = AutoYaml.loadConfiguration(new InputStreamReader(defaultConfig),file);
+				config.save();
+			}
+			userConfig.put(player, AutoYaml.loadConfiguration(file));
 		}
-		return AutoYaml.loadConfiguration(file);
+		return userConfig.get(player);
 	}
 }

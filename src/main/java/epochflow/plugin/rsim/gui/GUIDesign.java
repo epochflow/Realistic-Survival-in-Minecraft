@@ -3,7 +3,9 @@ package epochflow.plugin.rsim.gui;
 import org.bukkit.Material;
 import epochflow.plugin.rsim.Configs;
 import epochflow.plugin.rsim.key.LangKey;
+import epochflow.plugin.rsim.key.SkillType;
 import epochflow.plugin.rsim.key.StatusType;
+import epochflow.plugin.rsim.skill.AttackSkill;
 import epochflow.plugin.rsim.util.Util;
 
 // TODO 언어 분리
@@ -56,7 +58,13 @@ public class GUIDesign {
 		GUIWindow window = new GUIWindow("RSIM_SKILL_WEAPON", "RSiM - 전투 특화", 5);
 		
 		window.setItem(22, new GUIDynamicItem(Material.EXPERIENCE_BOTTLE)
-				.setName("§r남은 포인트 @v", (p) -> String.valueOf(Configs.getUserConfig(p).getInt(StatusType.POINT.getKey()))));
+				.setName("§r남은 포인트 @v", (p) -> String.valueOf(Configs.getInstance().getUserConfig(p).getInt(StatusType.POINT.getKey()))));
+		
+		window.setItem(21, new GUIDynamicItem(Material.RED_DYE)
+				.setName("§r데미지 증가 [@v/@v]", 
+						(p) -> String.valueOf(Configs.getInstance().getUserConfig(p).getInt(SkillType.WEAPON_INCREASE_DAMAGE.getUserKey())),
+						(p) -> String.valueOf(Configs.getInstance().getSkillConfig().getInt(SkillType.WEAPON_INCREASE_DAMAGE.getSkillMaxKey())))
+				.setAction((p) -> AttackSkill.usePoint(p, SkillType.WEAPON_INCREASE_DAMAGE)));
 		
 		GUIManager.getInstance().registerWindow(window);
 	}

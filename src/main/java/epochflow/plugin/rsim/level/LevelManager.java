@@ -34,7 +34,7 @@ public class LevelManager {
 		exp = (int)(exp * (1 - userRange) + (rand < balanceDiff ? balanceDiff : rand)); // 최소 + 밸런스 보정
 		
 		// 레벨 계산
-		AutoYaml config = Configs.getUserConfig(player);
+		AutoYaml config = Configs.getInstance().getUserConfig(player);
 		int currentExp = config.getInt(StatusType.EXP.getKey()) + exp;
 		int currentLevel = config.getInt(StatusType.LEVEL.getKey());
 		int point = 0;
