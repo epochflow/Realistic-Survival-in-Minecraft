@@ -27,12 +27,13 @@
 [![Stargazers][stars-shield]][stars-url]
 [![MIT License][license-shield]][license-url]
 [![Release][release-shield]][release-url]
-
-
-<!-- SUMMARY -->
-## 개요
-
-
+<br>
+<p align="center">
+  <img src="images/info.png" alt="Logo" width="100%" height="100%">
+</p>
+<br>
+RSiM 은 기존의 밋밋한 야생을 생존과 성장위주의 플레이로 변경하여<br>
+각 주력 분야로 직업 개념을 가지고 협력 플레이를 유도하는것이 가장 큰 목적이자 기능입니다.
 
 
 <!-- CONFIG -->
@@ -48,8 +49,7 @@
 
 
 <!-- ROADMAP -->
-## 로드맵
-
+## 진행도
 
 
 
